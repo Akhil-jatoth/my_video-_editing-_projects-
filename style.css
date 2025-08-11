@@ -15,7 +15,7 @@ video {
 }
 .center-content{
     position: absolute;
-    top:50%;
+    top:40%;
     left: 45%;
     bottom:0%;
     transform: translate(-50%,-50%);
@@ -29,7 +29,7 @@ video {
     z-index:0;
 }
 .behind-text1{
-    font-size:90px;
+    font-size:80px;
     font-style:oblique;
     top:0px;
     left:0px;
@@ -43,7 +43,7 @@ video {
 
 }
 .behind-text2{
-    font-size:90px;
+    font-size:80px;
     font-style:oblique;
     top: 200px;
     left: 700px;
@@ -89,3 +89,4 @@ h1{
   80%  { transform: translate(5px, -5px); }
   100% { transform: translate(0); }
 }
+
