@@ -47,15 +47,15 @@ video {
 
 .behind-text2 {
   top: 290px;
-  left: 900px;
+  left: 890px;
 }
 
-/* 🔥 Vibration Effect */
+/* Vibration Effect */
 .vibrate {
   animation: vibrate 0.3s infinite;
   animation-delay: 11s;
   display: inline-block;
-  /* animation-iteration-count: 100; */
+  animation-iteration-count: 100;
 }
 
 @keyframes vibrate {
@@ -66,8 +66,6 @@ video {
   80%  { transform: translate(5px, -5px); }
   100% { transform: translate(0); }
 }
-
-/* 🎯 RESPONSIVE DESIGN */
 
 /* For tablets */
 @media (max-width: 1000px) {
@@ -101,8 +99,7 @@ video {
     width: 150px;
   }
 }
-
-
+/* for video */
 @media (max-width: 1024px) {
   video {
     object-fit: contain;  /*show full video, may add black bars*/
@@ -116,3 +113,4 @@ video {
     transform: scale(1.2); /* zoom slightly so face/center stays visible */
   }
 }
+
