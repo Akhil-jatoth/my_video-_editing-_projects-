@@ -1,84 +1,61 @@
- body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: hidden;
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
 }
-video {
-    position: fixed;
-    top:100;
-    left: 100;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index:-2;
-}
-.center-content{
-    position: absolute;
-    top:40%;
-    left: 45%;
-    bottom:0%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-    color:#000;
-}
-.center-content image{
-    width: 100px;
-    height: auto;
-    position:absolute;
-    z-index:0;
-}
-.behind-text1{
-    font-size:80px;
-    font-style:oblique;
-    top:0px;
-    left:0px;
-    /* right:0px; */
-    bottom:900px;
-    position:absolute;
-    z-index: -1;
-    /* display: flex;
-    justify-content: space-evenly;
-    width: 1101px; */
 
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
-.behind-text2{
-    font-size:80px;
-    font-style:oblique;
-    top: 200px;
-    left: 700px;
-    right: 0px;
-    bottom: 0px;
-    position:absolute;
-    z-index: -1;
-    /* display: flex; */
-    /* justify-content:space-between; */
-    /* width: 1120px; */
+
+.center-content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #000;
 }
-h1{
-    mix-blend-mode: multiply;
-    opacity: 1;
+
+.center-content img {
+  width: 1400px;
+  height: auto;
+  position: relative;
+  z-index: 0;
 }
+
+.behind-text1, .behind-text2 {
+  font-size: 100px;
+  font-style: oblique;
+  position: absolute;
+  z-index: -1;
+  mix-blend-mode: multiply;
+  opacity: 1;
+}
+
+.behind-text1 {
+  top: 0px;
+  left: 0px;
+}
+
+.behind-text2 {
+  top: 290px;
+  left: 900px;
+}
+
+/* 🔥 Vibration Effect */
 .vibrate {
   animation: vibrate 0.3s infinite;
-  animation-delay:11s;
-  display: inline-block;
-  animation-iteration-count: 100;
-}
-
-@keyframes vibrate {
-  0%   { transform: translate(0); }
-  20%  { transform: translate(-5px, 5px); }
-  40%  { transform: translate(-5px, -5px); }
-  60%  { transform: translate(5px, 5px); }
-  80%  { transform: translate(5px, -5px); }
-  100% { transform: translate(0); }
-}
-#vibrate {
-  animation: vibrate 0.9s infinite;
   animation-delay: 11s;
   display: inline-block;
-  animation-iteration-count: 33.34;
+  /* animation-iteration-count: 100; */
 }
 
 @keyframes vibrate {
@@ -90,3 +67,52 @@ h1{
   100% { transform: translate(0); }
 }
 
+/* 🎯 RESPONSIVE DESIGN */
+
+/* For tablets */
+@media (max-width: 1000px) {
+  .behind-text1{
+    font-size: 50px;
+    top: -50;
+    left: 10px;
+  }
+  .behind-text2 {
+    font-size: 50px;
+    top: 200px;
+    left: 160px;
+  }
+  .center-content img {
+    width: 290px;
+  }
+}
+
+/* For mobiles */
+@media (max-width: 600px) {
+  .behind-text1, .behind-text2 {
+    font-size: 40px;
+    position: relative;
+    display: block;
+    text-align: center;
+    left: 0;
+    top: 0;
+    margin: 10px 0;
+  }
+  .center-content img {
+    width: 150px;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  video {
+    object-fit: contain;  /*show full video, may add black bars*/
+  }
+}
+
+/* 🎯 For mobiles */
+@media (max-width: 900px) {
+  video {
+    object-fit: cover;  /* fill screen */
+    transform: scale(1.2); /* zoom slightly so face/center stays visible */
+  }
+}
